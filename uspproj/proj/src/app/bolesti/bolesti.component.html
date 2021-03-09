@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<body>
+
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-6">
+
+            </div>
+            <div class="col-6" align="left">
+
+                <!--  <img src='assets/logo.png' width='100' height='100'> -->
+
+
+                <a routerLink="/log">Log out</a>
+                |
+                <a routerLink="/istrazivac">Lekovi</a>
+    
+
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <div align="center">
+        <div class="row">
+            <div class="col-8">
+                <table class="plava">
+                    <thead align="center">
+                        <tr align="center">
+                            <th align="center">Naziv</th>
+                            <th align="center">Lekovi</th>
+                            <th align="center">Detaljnija istrazivanja</th>
+
+                        </tr>
+                    </thead>
+
+
+                    <tr *ngFor="let x of bolesti;let i=index">
+                        <td>
+                            {{x.naziv}}
+                        </td>
+                        <td>
+                            <input type="button" class="btn-link" value="Lekovi" (click)="uzmilekove(x)">
+                        </td>
+                        <td>
+                            <input type="button" class="btn-link" value="Detalji" >
+                        </td>
+
+
+
+                    </tr>
+                </table>
+            </div>
+            <div class="col-4">
+                <span *ngIf="bolest!=null">
+                    <table>
+                        <thead>
+                            <th>Lekovi koji lece bolest "{{bolest.naziv}}"</th>
+                        </thead>
+                        <tr *ngFor="let x of lekovi;let i=index">
+                            <td align="center">
+                                {{x.naziv}}
+                            </td>
+                        </tr>
+
+                    </table>
+                </span>
+                
+            </div>
+        </div>
+    </div>
+
+</body>    

@@ -1,0 +1,36 @@
+.jumbotron{
+    background-color:whitesmoke;
+    color:rgb(54, 164, 207);
+    font-size: 0.8cm;
+    font-style: bold;
+    background-image: url('/assets/digitalhelath3.jpg');
+    background-size: cover;
+   
+    
+}
+
+#povecaj{
+    font-size: 20px;
+}
+
+body{
+    height: 100%;
+}
+
+.bb{
+    
+    color: rgb(54, 164, 207);
+}
+
+
+a{
+    text-decoration: none;
+    color:rgb(54, 164, 207);
+
+}
+
+a:hover{
+    color:rgb(54, 164, 207);
+    font-size: 1cm;
+	font-weight: bold;
+}

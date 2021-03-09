@@ -1,0 +1,97 @@
+.jumbotron{
+    background-color:whitesmoke;
+    color:rgb(7, 13, 99);
+    font-size: 0.8cm;
+    font-style: bold;
+    background-image: url('/assets/ris.jpg');
+    background-size: cover;
+   
+    
+}
+
+body{
+    height: 100%;
+}
+
+.bb{
+    
+    color: rgb(54, 164, 207);
+}
+
+
+a{
+    text-decoration: none;
+    color:rgb(7, 13, 99);
+
+}
+
+a:hover{
+    color:rgb(7, 13, 99);
+    font-size: 1cm;
+	font-weight: bold;
+}
+
+.leklink a:hover{
+    color:rgb(54, 164, 207);
+}
+.leklink a{
+    text-decoration: none;
+    color:rgb(54, 164, 207);
+}
+
+.slike{
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  
+  
+  table.plava{
+      border: 2px solid rgb(54, 164, 207);
+    background-color: #EEEEEE;
+    width: 80%;
+    text-align: center;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+   table.plava td, table.plava th {
+      border: 1px solid rgb(54, 164, 207);
+      padding: 3px 2px;
+      text-align: center;
+    }
+  
+    table.plava tbody td {
+      font-size: 19px;
+      font-weight: bold;
+      color: rgb(54, 164, 207);
+    }
+  
+    table.plava thead {
+      background: rgb(54, 164, 207);
+      background: -moz-linear-gradient(top, rgb(54, 164, 207) 100%);
+      background: -webkit-linear-gradient(top,rgb(54, 164, 207) 100%);
+      background: linear-gradient(to bottom, rgb(54, 164, 207) 100%);
+      border-bottom: 1px solid rgb(54, 164, 207);
+      text-align: center;
+    }
+    table.plava thead th {
+      font-size: 15px;
+      font-weight: bold;
+      color: #FFFFFF;
+      text-align: left;
+      border-left: 2px solid #D0E4F5;
+      text-align: center;
+    }
+    table.plava thead th:first-child {
+      border-left: none;
+      text-align: center;
+    }
+    table.plava tr:nth-child(even) {
+      background: rgb(208, 229, 238);
+    }
+    table.plava tfoot td {
+      font-size: 21px;
+    }
+
+    
+  

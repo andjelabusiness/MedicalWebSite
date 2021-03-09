@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<body>
+
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-6">
+
+            </div>
+            <div class="col-6" align="left">
+
+               <!--  <img src='assets/logo.png' width='100' height='100'> -->
+               <a routerLink="/gost">Gost</a>
+               |
+                
+                    <a routerLink="/log">Log in</a>
+                    |
+                    <a routerLink="/reg">Registracija</a>
+
+
+
+            
+
+
+            </div>
+            
+
+        </div>
+    </div>
+
+
+    <form>
+        <div align="center">
+            <br>
+            <br>
+            <br>
+            <table>
+
+                <br>
+                <tr>
+                    <td>Username:</td>
+                    <td>
+                        <input type="text" name="username" [(ngModel)]="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                        <input type="password" name="sifra" [(ngModel)]="sifra">
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+
+
+
+            <br>
+
+
+            <button (click)="uloguj()">Uloguj se</button>
+
+
+
+        </div>
+
+
+    </form>
+
+</body>

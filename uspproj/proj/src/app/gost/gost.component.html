@@ -1,0 +1,94 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<body>
+
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-6">
+
+            </div>
+            <div class="col-6" align="left">
+
+                <!--  <img src='assets/logo.png' width='100' height='100'> -->
+
+
+                <a routerLink="/log">Nazad</a>
+                |
+                <a routerLink="/apoteka">Najbliza apoteka</a>
+                |
+                <a routerLink="/bolgost">Bolesti</a>
+                
+                
+
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+    
+    <div align="center">
+        <div class="row">
+            <div class="col-8">
+                <table class="plava">
+                    <thead align="center">
+                        <tr align="center">
+                            <th align="center">Naziv</th>
+                            <th align="center">Uputstvo</th>
+                            <th align="center">Bolesti</th>
+                          
+
+                        </tr>
+                    </thead>
+
+
+                    <tr *ngFor="let x of lekovi;let i=index">
+                        <td>
+                            {{x.naziv}}
+                        </td>
+                        <td>
+                            <span (click)="gotolink(i)" style="color: green;">
+                                Uputstvo
+                            </span>
+                        </td>
+                        <td>
+                            <input type="button" class="btn-link" value="Bolesti" (click)="bolesti(x)">
+                        </td>
+                       
+
+
+
+                    </tr>
+                </table>
+            </div>
+            <div class="col-4">
+                <span *ngIf="lek!=null">
+                    <table>
+                        <thead>
+                            <th>Bolesti koje se lece lekom "{{lek.naziv}}"</th>
+                        </thead>
+                        <tr *ngFor="let x of boles;let i=index">
+                            <td align="center">
+                                {{x.naziv}}
+                            </td>
+                        </tr>
+
+                    </table>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+</body>

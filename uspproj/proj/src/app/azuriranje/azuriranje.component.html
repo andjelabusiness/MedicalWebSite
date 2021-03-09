@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-6">
+
+        </div>
+        <div class="col-6" align="left">
+
+           <!--  <img src='assets/logo.png' width='100' height='100'> -->
+           
+            
+                <a routerLink="/log">Log out</a>
+                |
+                <a routerLink="/admin">Glavna strana</a>
+                
+
+
+
+        
+
+
+        </div>
+        
+
+    </div>
+</div>
+<div class="container">
+    <header align="center">#Admin</header>
+    <br>
+    <br>
+    <div class="page-header" align="center">
+        <h1>Korisnici:</h1>
+    </div>
+    <div class="row">
+        <div class="col-8">
+    <br>
+        <br><table class="table table-bordered" align="center">
+            <tr *ngFor="let xx of koris; let ii=index">
+                <td align="center">
+                    {{xx.username}}
+                </td>
+                <td align="center">
+                    <span *ngIf="koris[ii].username!='admin'">
+                    <button class="btn-dark" (click)="dohvati(koris[ii])">Azuriraj</button>
+                </span>
+                <span *ngIf="koris[ii].username=='admin'">
+                    <button disabled>Azuriraj</button>
+                </span>
+                </td>
+        
+            </tr>
+        </table>
+    </div>
+    <div class="col-4">
+        <br>
+        <br>
+        <span *ngIf="trenutni!=null">
+        <table>
+         
+            
+            <tr>
+                <td>Naziv bolnice:</td>
+                <td>
+                    <input type="text" name="bolnica" [(ngModel)]="trenutni.bolnica">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" class="btn-info" value="Promeni" (click)="azuriraj()">
+                </td>
+            </tr>
+           
+        </table>
+    </span>
+    </div>
+    </div>
+</div>
